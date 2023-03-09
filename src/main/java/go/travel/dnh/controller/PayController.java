@@ -72,6 +72,7 @@ public class PayController {
         }
     }
 
+    /*결제성공 페이지*/
     @GetMapping("/confirm")
     public String bookingConfirm(@RequestParam Long rno, Model model) {
         AirReservationListDTO revDto = reservationService.getReservation(rno);
