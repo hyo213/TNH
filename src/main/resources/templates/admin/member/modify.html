@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin/admin-fragments/script :: script">
+
+</head>
+
+<body class="flex">
+
+<div th:replace="admin/admin-fragments/nav :: nav">
+</div>
+
+<div class="admin-content">
+    <h1>회원 등급수정</h1>
+    <form role="form" th:object="${memberDTO}" th:action method="post">
+        <ul>
+            <li>
+                <label>회원번호</label>
+                <input type="text" th:field="*{mno}" readonly>
+            </li>
+            <li>
+                <label>아이디</label>
+                <input type="text" th:field="*{mem_id}" readonly>
+            </li>
+            <li>
+                <label>이름</label>
+                <input type="text" th:field="*{mem_name}" readonly>
+            </li>
+            <li>
+                <label>회원등급</label>
+                <select name="role_set">
+                    <option value="USER">USER</option>
+                    <option value="ADMIN">ADMIN</option>
+                </select>
+            </li>
+            <li>
+                <button type="submit">저장하기</button>
+            </li>
+        </ul>
+
+    </form>
+</div>
+
+
+</body>
+
+
+</html>
+
+
+
+
+

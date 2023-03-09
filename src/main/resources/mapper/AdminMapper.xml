@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="go.travel.dnh.mapper.AdminMapper">
+    <!--회원리스트 조회-->
+    <select id="read" resultType="MemberDTO">
+        select m.mno, m.mem_id, m.mem_name, m.mem_phone, m.mem_gender, m.mem_birth, m.mem_in_date, mr.role_set
+        from member m, member_role mr
+        where m.mno = mr.mno;
+    </select>
+    <!--회원상세조회-->
+    <select id="readMno" resultType="MemberDTO" parameterType="Integer">
+        select m.mno, m.mem_id, m.mem_name, mr.role_set
+        from member m, member_role mr
+        where m.mno = #{mno} and m.mno = mr.mno;
+    </select>
+    <!--회원등급 업데이트-->
+    <update id="update" parameterType="MemberDTO">
+        update member_role set role_set = #{role_set} where mno = #{mno};
+    </update>
+</mapper>

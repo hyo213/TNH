@@ -1,12 +1,15 @@
 package go.travel.dnh.controller;
 
 import go.travel.dnh.domain.air.AirProductDTO;
+import go.travel.dnh.domain.member.MemberDTO;
+import go.travel.dnh.service.AdminService;
 import go.travel.dnh.service.AirProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.Member;
 import java.util.List;
 
 @Controller
@@ -15,6 +18,7 @@ import java.util.List;
 public class AdminController {
 
     private final AirProductService airProductService;
+    private final AdminService adminService;
 
 //    admin 메인 페이지 이동
     @GetMapping("/main")
@@ -46,7 +50,6 @@ public class AdminController {
         dto.setAr_res_cnt(dto.getAr_cnt());
         m.addAttribute(dto);
         airProductService.write(dto);
-        System.out.println(dto);
         return "redirect:/admin/airlist";
     }
 
@@ -54,7 +57,6 @@ public class AdminController {
     public String air_modify_page(@PathVariable("ano")Integer ano, Model m) {
         AirProductDTO dto = airProductService.read(ano);
         m.addAttribute("list",dto);
-        System.out.println(dto);
         return "admin/air/modify";
     }
     @PostMapping("/airModify")
@@ -69,5 +71,27 @@ public class AdminController {
     public String remove(@RequestParam("ano") Integer ano) {
         airProductService.remove(ano);
         return "redirect:/admin/airlist";
+    }
+
+    /*회원리스트*/
+    @GetMapping("/memberList")
+    public String adminMemberList(Model m){
+        List<MemberDTO> list = adminService.readList();
+        m.addAttribute("memberList",list);
+        return "admin/member/list";
+    }
+
+    /*회원등급 업데이트*/
+    @GetMapping("/memberList/{mno}")
+    public String adminMemberModify(@PathVariable("mno")Integer mno, Model m) {
+        MemberDTO memberDTO = adminService.readMno(mno);
+        m.addAttribute("memberDTO",memberDTO);
+        return "admin/member/modify";
+    }
+
+    @PostMapping("/memberList/{mno}")
+    public String adminMemberModifyPost(MemberDTO memberDTO) {
+        adminService.updateRole(memberDTO);
+        return "redirect:/admin/memberList";
     }
 }
