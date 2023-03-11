@@ -30,7 +30,11 @@
   
 </div>
 <h1>개발 환경</h1>
- <img src="https://img.shields.io/badge/IntelliJ IDEA-#000000?style=for-the-badge&logo=IntelliJ IDEA&logoColor=white">     
+ <img src="https://img.shields.io/badge/IntelliJ IDEA-000000?style=for-the-badge&logo=IntelliJIDEA&logoColor=white">
+  <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white">
+   <img src="https://img.shields.io/badge/IntelliJ IDEA-000000?style=for-the-badge&logo=IntelliJIDEA&logoColor=white">
+    <img src="https://img.shields.io/badge/IntelliJ IDEA-000000?style=for-the-badge&logo=IntelliJIDEA&logoColor=white">
+    
 <h1>사용 API</h1>
 <li>OAuth2 2.0 - 소셜로그인 (네이버, 카카오, 구글)</li>
 
