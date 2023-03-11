@@ -15,13 +15,13 @@
 코드 약 0000줄
 
 <h1>사용 API</h1>
-* OAuth2 2.0 - 소셜로그인 (네이버, 카카오, 구글)
-* 
-* i'mport - 결제 및 환불
-* 
-* SpringBoot Starter Mail 2.7.0 api - 이메일 인증번호 발송
-* 
-* kakao 채널 - 고객 상담 서비스
+<li>OAuth2 2.0 - 소셜로그인 (네이버, 카카오, 구글)</li>
+
+<li> i'mport - 결제 및 환불</li>
+
+<li>SpringBoot Starter Mail 2.7.0 api - 이메일 인증번호 발송</li>
+
+<li>kakao 채널 - 고객 상담 서비스</li>
 <h1>ERD</h1>
 테이블 13개
 컬럼 88개
