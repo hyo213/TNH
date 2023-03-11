@@ -16,8 +16,8 @@
 <div align=center> 
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
     <img src="https://img.shields.io/badge/spring boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
-      <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
   <img src="https://img.shields.io/badge/spring security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white"> 
+        <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
     <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
   <img src="https://img.shields.io/badge/mybatis-2E51A2?style=for-the-badge&logo=&logoColor=white"><br>
   
@@ -48,12 +48,14 @@
 <li>kakao 채널 - 고객 상담 서비스</li>
 <h1>ERD</h1>
 테이블 13개
+
 컬럼 88개
+<br>
 
 ![GO TRAVEL ERD](https://user-images.githubusercontent.com/120771212/224479301-f6ff242e-9752-4767-b162-ac1ce938c03b.png)
 
-<h1></h1>
-시연 영상 -> 추후 업데이트 
+<h1>시연 영상</h1>
+추후 업데이트 
 <h1>팀원</h1>
 <li>곽효정</li>
 https://github.com/hyo213
