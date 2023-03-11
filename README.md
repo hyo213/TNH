@@ -17,6 +17,8 @@
 <h1>ERD</h1>
 테이블 13개
 컬럼 88개
+
 ![GO TRAVEL ERD](https://user-images.githubusercontent.com/120771212/224479301-f6ff242e-9752-4767-b162-ac1ce938c03b.png)
+
 <h1></h1>
 시연 영상 -> 추후 업데이트 
