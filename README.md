@@ -20,5 +20,7 @@
 
 ![GO TRAVEL ERD](https://user-images.githubusercontent.com/120771212/224479301-f6ff242e-9752-4767-b162-ac1ce938c03b.png)
 
+[ERD.pdf](https://github.com/deohyunpark/TNH/files/10948278/ERD.pdf)
+
 <h1></h1>
 시연 영상 -> 추후 업데이트 
