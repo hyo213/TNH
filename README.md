@@ -4,14 +4,15 @@
 항공권 예약 서비스를 제공하는 사이트
 <h1>프로젝트 일정 및 규모</h1>
 
-개발 기간: 4주(2023.02.07~03.06)
+개발 기간: 4주(2023.02.07~03.06), 280시간 (28X10H)
 
 인원 : 3명(Backend 3명)
 
 <h1>프로젝트 규모(기준일 : 2023.03.06)</h1>
-파일 00개
+java : 83 개 (4,270줄)
+xml : 11 개 
+html : 44 개 (13,606줄)
 
-코드 약 0000줄
 <h1>사용 기술</h1>
 <div align=center> 
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
@@ -53,15 +54,20 @@
 <br>
 
 ![GO TRAVEL ERD](https://user-images.githubusercontent.com/120771212/224479301-f6ff242e-9752-4767-b162-ac1ce938c03b.png)
+<h1>주요 기능</h1>
+<h2><a href="https://github.com/deohyunpark/TNH/wiki/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-UI-%EB%B0%8F-%EC%84%A4%EB%AA%85">✅ [프로젝트 UI 및 설명]</a></h2>
 
-<h1>시연 영상</h1>
-추후 업데이트 
+![gotravle_main](https://user-images.githubusercontent.com/120771212/229486363-22080d9e-f55d-4001-8417-7abe5fba59a9.jpeg)
+
+<br>
+<h2><a href="https://github.com/deohyunpark/TNH/wiki/%EA%B8%B0%EB%8A%A5%EB%B3%84-%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4-%EB%A1%9C%EC%A7%81">✅ [기능별 비즈니스 로직]</a></h2>
+
 <h1>팀원</h1>
 <li>곽효정</li>
 https://github.com/hyo213
 <li>박나라</li>
 https://github.com/nara316
 <li>박서현</li>
-https://github.com/deohyunpark/TNH
+https://github.com/deohyunpark
 
 
