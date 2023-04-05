@@ -60,7 +60,7 @@ html : 44 개 (13,606줄)
 ![gotravle_main](https://user-images.githubusercontent.com/120771212/229486363-22080d9e-f55d-4001-8417-7abe5fba59a9.jpeg)
 
 <br>
-<h2><a href="https://github.com/deohyunpark/TNH/wiki/%EA%B8%B0%EB%8A%A5%EB%B3%84-%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4-%EB%A1%9C%EC%A7%81">✅ [기능별 비즈니스 로직]</a></h2>
+<h2><a href="https://github.com/hyo213/TNH/wiki/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-UI-%EB%B0%8F-%EC%84%A4%EB%AA%85">✅ [기능별 비즈니스 로직]</a></h2>
 
 <h1>팀원</h1>
 <li>곽효정</li>
