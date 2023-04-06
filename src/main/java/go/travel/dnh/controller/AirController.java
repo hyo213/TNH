@@ -206,6 +206,7 @@ public class AirController {
     }
 
 
+    //공항이름 넘기는 메소드
     public String airport(Integer airportCode){
         List<AirportDTO> airportList = airProductService.getListAirport();
 
