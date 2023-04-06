@@ -2,12 +2,9 @@ package go.travel.dnh.controller;
 
 import go.travel.dnh.domain.User.LoginUser;
 import go.travel.dnh.domain.air.AirProductDTO;
-import go.travel.dnh.domain.member.MemberDTO;
 import go.travel.dnh.domain.reservation.AirReservationDTO;
-import go.travel.dnh.domain.reservation.AirReservationListDTO;
 import go.travel.dnh.domain.reservation.ReservationDetail;
 import go.travel.dnh.service.AirProductService;
-import go.travel.dnh.service.MemberLoginService;
 import go.travel.dnh.service.ReservationService;
 import go.travel.dnh.validation.ReservationInfo;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -25,7 +21,6 @@ import java.util.List;
 public class ReservationController {
 
     private final ReservationService reservationService;
-    private final MemberLoginService memberLoginService;
     private final AirProductService airProductService;
 
     /*예약정보 예약화면에 넘기기*/
@@ -50,15 +45,11 @@ public class ReservationController {
 
     /*예약DB 저장*/
     @PostMapping("/reservation")
-    public String reservation(AirReservationDTO dto, @ModelAttribute("reservationDetails") ReservationDetail reservationDetails, Model m, @AuthenticationPrincipal LoginUser loginUser, Authentication authentication) {
+    public String reservation(AirReservationDTO dto, @ModelAttribute("reservationDetails") ReservationDetail reservationDetails, @AuthenticationPrincipal LoginUser loginUser, Authentication authentication) {
+
         reservationService.reservation(dto,reservationDetails,loginUser,authentication);
 
-        MemberDTO memberDTO = memberLoginService.findMember(loginUser,authentication);
-        List<AirReservationListDTO> revList = reservationService.selectMyRes(loginUser,authentication);
-
-        m.addAttribute("memberDTO", memberDTO);
-        m.addAttribute("revList", revList);
-        return "order/bookingList";
+        return "redirect:/bookingList";
     }
 
 }

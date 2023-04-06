@@ -77,7 +77,7 @@
         where mno = #{mno};
     </select>
 
-    <!--마이페이지 개인 예약내역(왕복)-->
+    <!--마이페이지 개인 예약내역-->
     <select id="selectMyRes" resultType="AirReservationListDTO" parameterType="int">
         select
                 (select ap_code_name from airport  where ap_code = p.ar_from) ar_from,

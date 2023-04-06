@@ -2,8 +2,9 @@ package go.travel.dnh.domain.member;
 
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.stereotype.Repository;
 
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -19,8 +20,10 @@ public class MemberDTO {
     private String mem_phone;
     private String mem_gender;
     private Date mem_birth;
-    private Date mem_in_date;
-    private Date mem_up_date;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime mem_in_date;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime mem_up_date;
     private String role_set;
     private boolean mem_sns;
 

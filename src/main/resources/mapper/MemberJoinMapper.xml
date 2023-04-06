@@ -33,6 +33,7 @@
         SET mem_pwd = #{mem_pwd}
         WHERE mem_id = #{mem_id};
     </update>
+
     <!-- 소셜로그인 회원가입시 소셜 유무 True    -->
     <insert id="insertSnsMember" parameterType="MemberDTO" useGeneratedKeys="true" keyProperty="mno" >
         INSERT INTO member (mem_id, mem_pwd, mem_name, mem_phone, mem_gender, mem_birth, mem_in_date, mem_up_date, mem_sns)

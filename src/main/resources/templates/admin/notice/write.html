@@ -6,16 +6,16 @@
 </head>
 <style>
     .layout {
-        width: 500px;
+        width: 700px;
         margin: 0 auto;
         margin-top: 40px;
     }
-    .layout > input{
+    .layout input{
         width: 500px;
         box-sizing: border-box;
     }
-    .layout > textarea {
-        width: 100%;
+    .layout textarea {
+        width: 500px;
         margin-top: 10px;
         min-height: 300px;
     }
@@ -26,10 +26,10 @@
 </div>
 <div class="layout">
     <form action="/notice/write" method="post" enctype="multipart/form-data">
-        제목<input name="n_title" type="text"/><br>
-        내용<textarea name="n_content"></textarea><br>
-        <input type="file" name="file">
-        <button type="submit">작성</button>
+        <p>제목</p><input name="n_title" type="text" /><br>
+        <p>내용</p><textarea name="n_content"></textarea><br>
+        <input type="file" name="file"><br>
+        <button type="submit" style="margin-right: 10px">작성</button>
     </form>
 </div>
 

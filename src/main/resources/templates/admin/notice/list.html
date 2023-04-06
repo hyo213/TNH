@@ -3,10 +3,11 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="admin/admin-fragments/script :: script">
+
 </head>
 <style>
         .layout {
-                width: 800px;
+                width: 900px;
                 margin: 0 auto;
                 margin-top: 40px;
         }
@@ -24,6 +25,10 @@
             margin: 8px;
         }
         .search_box {
+            margin: 0 auto;
+            text-align: center;
+        }
+        .notice-table {
             margin: 0 auto;
             text-align: center;
         }
@@ -47,35 +52,38 @@
                 </div>
             </form>
         </div>
-       <table>
-           <thead>
-               <tr>
-                  <th>글번호</th>
-                  <th>제목</th>
-                  <th>썸네일</th>
-               </tr>
-           </thead>
-           <tbody>
-               <tr th:each="noticeDTO : ${response.getList()}">
-                   <th th:text="${noticeDTO.nno}"></th>
-                   <th>
-                       <a th:text="${noticeDTO.n_title}" th:href="@{/notice/list/detail(nno=${noticeDTO.nno})}"></a>
-                   </th>
-                   <th>
-                       <img th:src="@{${noticeDTO.n_filepath}}" style="width: 300px; height:300px;"/>
-                   </th>
-               </tr>
-           </tbody>
-       </table>
+        <div class="notice-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>글번호</th>
+                    <th>제목</th>
+                    <th>썸네일</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="noticeDTO : ${response.getList()}">
+                    <th th:text="${noticeDTO.nno}"></th>
+                    <th>
+                        <a th:text="${noticeDTO.n_title}" th:href="@{/notice/list/detail(nno=${noticeDTO.nno})}"></a>
+                    </th>
+                    <th>
+                        <img th:src="@{${noticeDTO.n_filepath}}" th:if="${noticeDTO.n_filepath != null}"  style="width: 300px; height:300px;"/>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
         <div class="pagination">
-            <li class="page-item" style="color: #0b0a12; display: inline-block" th:classappend="${response.getNoticePagination().startPage == 0} ? 'disabled'">
-                <a class="page-link" th:href="@{/notice/list(page=${response.getNoticePagination().startPage - 1})}">&laquo;</a>
+            <li class="page-item" style="color: #0b0a12; display: inline-block" th:classappend="${response.getNoticePagination().existPrevPage == 0} ? 'disabled'">
+                <a class="page-link" th:href="@{/notice/list(page=${response.getNoticePagination().getStartPage() - 1})}"><i class="fa-solid fa-angles-left"></i></a>
             </li>
             <li class="page-item" style="color: #0b0a12; display: inline-block" th:each="page: ${#numbers.sequence(response.getNoticePagination().startPage, response.getNoticePagination().endPage)}" th:classappend="${page == params.getPage()} ? 'active'">
                 <a class="page-link" th:text="${page}" th:href="@{/notice/list(page=${page})}"></a>
             </li>
             <li class="page-item" style="color: #0b0a12; display: inline-block" th:classappend="${response.getNoticePagination().existNextPage == 0} ? 'disabled'">
-                <a class="page-link" th:href="@{/notice/list(page=${response.getNoticePagination().getEndPage()+1})}">&raquo;</a>
+                <a class="page-link" th:href="@{/notice/list(page=${response.getNoticePagination().getEndPage()+1})}"><i class="fa-solid fa-angles-right"></i></a>
             </li>
         </div>
     </div>

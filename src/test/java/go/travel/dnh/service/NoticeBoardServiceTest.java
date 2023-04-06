@@ -36,7 +36,7 @@ class NoticeBoardServiceTest {
     }
     @Test
     void insert() {
-        for (int i = 1; i < 5 ; i++) {
+        for (int i = 1; i < 100 ; i++) {
             NoticeDTO noticeDTO = new NoticeDTO();
             noticeDTO.setNno(i);
             noticeDTO.setN_title("공지 TEST" + i);

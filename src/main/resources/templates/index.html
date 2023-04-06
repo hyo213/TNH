@@ -63,7 +63,7 @@
 <!-- Slider START -->
 <div class="tiny-slider" style="margin: 10px auto 0 auto; width: 600px; height: 25px;text-align: center">
     <div class="tiny-slider-inner" data-autoplay="true"  data-edge="2" data-dots="false" data-items-xl="1" data-items-lg="1" data-items-md="1">
-        <ul th:each="noticeDTO : ${response.getList()}" th:if="${noticeDTO.nno > 218}" >
+        <ul th:each="noticeDTO : ${response.getList()}" th:if="${noticeDTO.nno > 99}" >
             <li style="list-style: none; color:#333; font-size:18px; text-align: center">
                 <i class="bi bi-chat-right-dots"></i>  <a th:text="${noticeDTO.n_title}" th:href="@{/notice/list/detail(nno=${noticeDTO.nno})}" style="margin: 0 auto;text-decoration: none;color:#333;"></a>
             </li>

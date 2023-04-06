@@ -5,14 +5,18 @@
 <head th:replace="admin/admin-fragments/script :: script">
 
 </head>
-
+<style>
+    table, tr {
+        width:1000px;
+        height:35px;
+    }
+</style>
 <body class="flex">
 <div th:replace="admin/admin-fragments/nav :: nav">
 </div>
 
 
 <div class="admin-content">
-    회원
     <table>
         <thead>
         <tr>
@@ -32,13 +36,13 @@
             <td th:text="${ml.mem_name}"></td>
             <td th:text="${ml.mem_phone}"></td>
             <td th:text="${ml.mem_gender}"></td>
-            <td th:text="${ml.mem_birth}"></td>
-            <td th:text="${ml.mem_in_date}"></td>
+            <td th:text="${#dates.format(ml.mem_birth, 'yyyy-MM-dd')}"></td>
+            <td th:text="${#temporals.format(ml.mem_in_date, 'yyyy-MM-dd HH:mm')}"></td>
             <td th:text="${ml.role_set}"></td>
             </td>
             <td>
                 <a th:href="@{/admin/memberList/{mno}(mno=${ml.mno})}">
-                    <button type="button">삭제</button>
+                    <button type="button">변경</button>
                 </a>
             </td>
         </tr>
